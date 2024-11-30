@@ -3,9 +3,10 @@ import sys
 
 pygame.init() # initialize it
 width, height = 1000, 1000 
-square_size = 10  
+square_size = 20  
 black = (0, 0, 0)
 white = (255, 255, 255)
+line_color = (50, 50, 50)
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("conway's game of life")
 grid = [[0 for _ in range(100)] for _ in range(100)]
@@ -92,6 +93,7 @@ while running:
                 pygame.draw.rect(screen, white, rect)
             else:
                 pygame.draw.rect(screen, black, rect, 1)
+            pygame.draw.rect(scree, line_color, rect, 1) # grid lines
     
     pygame.display.flip()
 
