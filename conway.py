@@ -70,7 +70,7 @@ while running:
         elif event.type == pygame.MOUSEBUTTONUP:
             drawing = False
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_u:  # start game
+            if event.key == pygame.K_SPACE:  # start game
                 drawing_enabled = False
                 auto_update = True
 
